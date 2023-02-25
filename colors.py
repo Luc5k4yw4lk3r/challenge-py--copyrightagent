@@ -83,7 +83,7 @@ def main() -> None:
         output(colors, ["name", options.format])
     else:
         output(colors)
-    print("\n\nColors not found")
+    print("\n\nColors errors")
     output(colors_errors)
 
 
