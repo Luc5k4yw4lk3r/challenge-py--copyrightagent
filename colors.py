@@ -25,7 +25,7 @@ FORMATS = ["hex", "rgb"]
 
 
 class Color(object):
-    def __init__(self, name, HEX, RGB):
+    def __init__(self, name: str, HEX: str, RGB: Dict):
         self.name = name
         self.hex = HEX
         self.rgb = RGB
