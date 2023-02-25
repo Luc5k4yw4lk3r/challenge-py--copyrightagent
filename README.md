@@ -15,3 +15,6 @@ The API mock ( `getColor.py`) must not be changed and must be used.
 ##### Additional requirements
 - The program must also support the colors white and black.
 - The program must also return the RGB values.
+
+##### Script execution
+Execution script example: ./colors.py --format hex --color-list black green blue caqui red

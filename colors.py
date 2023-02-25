@@ -76,7 +76,7 @@ def main() -> None:
     parser = build_parser()
     options = parser.parse_args()
 
-    colors, colors_not_found = getColors(options.color_list)
+    colors, colors_errors = get_colors(options.color_list)
 
     print("\n\nInformation about colors")
     if options.format in FORMATS:
@@ -84,7 +84,7 @@ def main() -> None:
     else:
         output(colors)
     print("\n\nColors not found")
-    output(colors_not_found)
+    output(colors_errors)
 
 
 def output(items: List, attributes: Any = None) -> None:
@@ -98,7 +98,7 @@ def output(items: List, attributes: Any = None) -> None:
             print("")
 
 
-def getColors(color_name_list: List[str]) -> List:
+def get_colors(color_name_list: List[str]) -> List:
     colors_detail = []
     colors_errors = []
     for color_name in color_name_list:
